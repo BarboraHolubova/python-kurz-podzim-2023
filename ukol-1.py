@@ -9,6 +9,6 @@ print(f"{krestny[0].upper()}{krestny[1:].lower()} {prijmeni[0].upper()}{prijmeni
 print(f"{krestny[0].upper()}. {prijmeni[0].upper()}.")
 delka_krestne = len(krestny)
 if delka_krestne > 5: 
-    print(f"{krestny[0].upper()} {prijmeni[0].upper()}{prijmeni[1:].lower()}")
+    print(f"{krestny[0].upper()}. {prijmeni[0].upper()}{prijmeni[1:].lower()}")
 else:
     print(f"{krestny[0].upper()}{krestny[1:].lower()} {prijmeni[0].upper()}{prijmeni[1:].lower()}")
