@@ -11,12 +11,10 @@ mnozstvi = int(input("Zadej počet součástek: "))
 if not kod in sklad:
     print("Součástka není skladem.")
 elif mnozstvi > sklad[kod]:
-    print(f"Součástky {kod} lze prodat pouze {sklad[kod]}")
-    BAV21 = sklad.pop("BAV21")
-    for kod in sklad:
-        print(kod)
+    print(f"Součástky {kod} lze prodat pouze {sklad[kod]} kusů.")
+    sklad.pop(kod)
+    print(sklad)
 else:
     print("Součástku lze prodat v plné výši.")
-    sklad["BAV21"] -= 50 
-for kod, mnozstvi in sklad.items():
-    print(f'{kod}:{mnozstvi}')
+    sklad[kod] -= 50 
+    print(sklad)
