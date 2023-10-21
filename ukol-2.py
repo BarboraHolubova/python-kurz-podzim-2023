@@ -16,5 +16,5 @@ elif mnozstvi > sklad[kod]:
     print(sklad)
 else:
     print("Součástku lze prodat v plné výši.")
-    sklad[kod] -= 50 
+    sklad[kod] -= mnozstvi 
     print(sklad)
