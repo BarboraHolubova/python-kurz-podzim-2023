@@ -10,8 +10,7 @@ for student, hodnota in data.items():
         hodnota = "Pass"
     else:
         hodnota = "Fail"
-    if hodnota not in  hodnoceni:
-        hodnoceni[student] = hodnota
+    hodnoceni[student] = hodnota
 print(hodnoceni)
 
 with open("prospech.json", mode="w", encoding="utf-8") as output_file:
