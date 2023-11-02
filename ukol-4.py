@@ -1,8 +1,10 @@
+from math import ceil
+
 def tel(cislo):
     if len(cislo) == 9:
         tel_number = True
     elif len(cislo) == 13:
-        if (cislo[:3]) == "+420":
+        if cislo[:4] == "+420":
             tel_number = True
         else:
             tel_number = False
@@ -10,10 +12,17 @@ def tel(cislo):
         tel_number = False
     return tel_number
 
+def sms(zprava, kc = 3):
+    cena_zpravy = ceil(len(zprava)/180) * kc
+    return cena_zpravy
+
 cislo = input("Zadej telefonní čílo: ")
 tel_number = tel(cislo)
 if tel_number == True:
     zprava = input("Zadej zprávu: ")
+    cena_zpravy = sms(zprava, kc = 3)
+    print(f"Cena zprávy je {cena_zpravy} Kč.")
+    print(len(zprava)/180)
 else:
     print("Zadané číslo je neplatné.")
 
