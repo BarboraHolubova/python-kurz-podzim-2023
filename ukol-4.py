@@ -22,7 +22,7 @@ if tel_number == True:
     zprava = input("Zadej zprávu: ")
     cena_zpravy = sms(zprava, kc = 3)
     print(f"Cena zprávy je {cena_zpravy} Kč.")
-    print(len(zprava)/180)
+    print(len(zprava)/180)   # pro kontrolu
 else:
     print("Zadané číslo je neplatné.")
 
