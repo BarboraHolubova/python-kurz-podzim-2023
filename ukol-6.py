@@ -7,10 +7,10 @@ class Auto:
 
     def pujc_auto(self):
         if self.dostupne == False:
-            return "Vozidlo není k dispozici"
+            return "Vozidlo není k dispozici."
         else:
-            self.dostupne == False
-            return "Potvrzuji zapůjčení vozidla"
+            self.dostupne = False
+            return "Potvrzuji zapůjčení vozidla."
         
     def get_info(self):
         return f"Auto {self.typ_vozidla}, které si chcete půjčit, má registrační značku {self.registracni_znacka}."
